@@ -107,6 +107,17 @@ export const experience = [
 
 export const projects = [
   {
+    title: "AssistSales · AI Sales Analytics Chatbot",
+    description:
+      "End-to-end platform combining data engineering and NLP to analyze and predict commercial performance for a multi-store electronics retailer: multi-source data cleaning (sales, products, clients, stores, reviews), comparative study of 3 non-similar NLP intent-matching approaches, Flask API, and a full Symfony web application with secure authentication and a ChatGPT-style multi-conversation interface.",
+    tags: ["Python", "Flask", "Sentence-Transformers", "Symfony", "MySQL", "scikit-learn"],
+    metric: { label: "16", value: " intents recognized" },
+    dataset: "5 data sources cleaned",
+    image: "/projects/chatbot.png",
+    demoUrl: "https://my-portfolio-takoua.vercel.app/",
+    githubUrl: "https://github.com/Takouakhammassi/sales_analysis_chatbot",
+  },
+  {
     title: "Hirfatuna · Tunisian Craft Heritage AI Platform",
     description:
       "End-to-end platform combining computer vision and generative AI to identify and document Tunisian handicrafts: self-collected dataset, comparative architecture study, VLM filtering guard, RAG-powered chatbot, and deployed web application.",
