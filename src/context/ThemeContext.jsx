@@ -7,10 +7,8 @@ export function ThemeProvider({ children }) {
     if (typeof window === "undefined") return "dark";
     const saved = window.localStorage.getItem("portfolio-theme");
     if (saved === "light" || saved === "dark") return saved;
-    return window.matchMedia("(prefers-color-scheme: light)").matches
-      ? "light"
-      : "dark";
-  });
+    return "dark"; 
+});
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
