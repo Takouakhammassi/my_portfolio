@@ -5,7 +5,7 @@ export const profile = {
     "I transform raw data into decisions through modeling, experimentation, and deployment.",
   location: "Tunis, Tunisia",
   email: "takoua.khammassi@isamm.u-manouba.tn",
-  resumeUrl: "/cv.pdf",
+  resumeUrl: "/cv_takoua_khammassi.pdf",
   
   introVideo: "/profile/me.mp4",
   introVideoChromaKey: "#000000",
