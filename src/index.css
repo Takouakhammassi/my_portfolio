@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+ 
+  --color-void: #080b10;     
+  --color-panel: #10151d;       
+  --color-panel-2: #161d27;     
+  --color-line: #1f2732;        
+  --color-ink: #e9edf3;         
+  --color-ink-dim: #7c8798;    
+  --color-ink-faint: #47505f;   
+
+  --color-violet: #b98cf2;     
+  --color-amber: #f2b84b;       
+  --color-rose: #f0709c;        
+
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root[data-theme="light"] {
+  --color-void: #f5f7fa;
+  --color-panel: #ffffff;
+  --color-panel-2: #eef1f6;
+  --color-line: #dde3ec;
+  --color-ink: #10151c;
+  --color-ink-dim: #4b5768;
+  --color-ink-faint: #8a94a3;
+
+  --color-violet: #7a4bc9;
+  --color-amber: #a86a05;
+  --color-rose: #c94b78;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  background: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-violet) 30%, transparent);
+  color: var(--color-ink);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-faint);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-line) 55%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-line) 55%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.glass {
+  background: color-mix(in srgb, var(--color-panel) 65%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--color-line);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--color-violet), var(--color-rose) 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.caret::after {
+  content: "";
+  display: inline-block;
+  width: 0.55ch;
+  height: 1em;
+  margin-left: 2px;
+  background: var(--color-violet);
+  vertical-align: -0.15em;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
