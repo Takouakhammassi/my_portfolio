@@ -10,14 +10,14 @@ generic template.
 
 ## Highlights
 
-- **3D embedding-space hero** — an animated, mouse-interactive point cloud
+- **3D embedding-space hero** : an animated, mouse-interactive point cloud
   (Three.js) styled like a t-SNE/PCA projection, not a generic particle effect
 - **Light/dark mode** with a fully theme-reactive palette
 - **AI-generated talking avatar** in the hero, with real-time background
   removal (canvas-based chroma key)
-- **Interactive certifications** — click to preview and download the PDF
+- **Interactive certifications** : click to preview and download the PDF
 - **Project detail modals** with live demo, source code, and key metrics
-- **Working contact form** — real emails via Web3Forms, no backend
+- **Working contact form** : real emails via Web3Forms, no backend
 
 ## Stack
 
